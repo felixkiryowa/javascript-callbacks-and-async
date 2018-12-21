@@ -1,0 +1,69 @@
+<html>
+    <head></head>
+    <body>
+
+    </body>
+    <script>
+        var fruits = ['Apple','Banana'];
+        fruits.shift();   // Remove Apple from the front
+        fruits.unshift('Strawberry') // add to the front
+        var first = fruits[0];
+        fruits.push('Orange');
+        fruits.forEach(function(item, index, array){
+          console.log(item, index);
+          console.log(array);
+        });
+       // Remove the first element of an array 
+        fruits.pop();
+        //Find Index of an Item in An array
+        var pos = fruits.indexOf('Banana');
+        // Remove an item by index position
+        var people = ['patricia','abaho','jane','hope'];
+        //Make a copy of an array
+        var copied_array = people.slice();
+        console.log(copied_array);
+        var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+        console.log(years['2'] != years['02']);
+        //Convert array elements to strings
+        console.log(years.join());
+        //from position this and the number of items to remove fromthat specified position
+        people.splice(0,2);
+        console.log(people);
+
+        var array1 = [1, 4, 9, 16];
+
+        // pass a function to map
+        const map1 = array1.map(x => x * 2);
+
+        console.log(map1);
+        // expected output: Array [2, 8, 18, 32]
+        
+        //multi dimensional arrays
+        var board = [ 
+                    ['R','N','B','Q','K','B','N','R'],
+                    ['P','P','P','P','P','P','P','P'],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    [' ',' ',' ',' ',' ',' ',' ',' '],
+                    ['p','p','p','p','p','p','p','p'],
+                    ['r','n','b','q','k','b','n','r'] 
+            ];
+
+        //console.log(board.join('\n') + '\n\n');
+        //Using arrays to tabulate values
+        values = [];
+        for (var x = 0; x < 10; x++){
+            values.push([
+                2 ** x,
+                2 * x ** 2,
+                2 ** 3
+            ])
+        };
+        console.log(values);
+
+        console.log(pos);
+        console.log(first);
+        console.log(fruits.length);
+    </script>
+</html>
